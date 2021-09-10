@@ -7,7 +7,11 @@ const UserSchema = new mongoose.Schema({
     address: [{ detail: { type: String }, for: { type: String } }],
     phoneNumber: [{ type: Number }]
 
-});
+},
+    {
+        timestamps: true, //this will give createdAt and updatedAt
+    }
+);
 
 export const UserModel = mongoose.model("Users", UserSchema);
 

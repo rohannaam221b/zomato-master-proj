@@ -6,7 +6,10 @@ const ImageSchema = new mongoose.Schema({
             location: { type: String, required: true },
         },
     ],
-});
+},
+    {
+        timestamps: true, //this will give createdAt and updatedAt
+    });
 
 
 export const ImageModel = mongoose.model("Images", ImageSchema);

@@ -28,7 +28,10 @@ const FoodSchema = new mongoose.Schema({
 
 
 
-});
+},
+    {
+        timestamps: true, //this will give createdAt and updatedAt
+    });
 
 
 export const FoodModel = mongoose.model("Foods", FoodSchema);
